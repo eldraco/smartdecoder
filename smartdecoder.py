@@ -10,6 +10,7 @@ a = raw_input()
 print a
 print type(a)
 #a = "\x64\u0065\u006cay\u0042\x65\u0074\u0077\u0065e\x6e"
+# "delayBetween"
 
 n = ''
 i=0
@@ -23,10 +24,11 @@ while i < len(a):
             i += 4
         elif a[i+1] == 'u':
             # unicode
+            #temp = unicode(a[i:i+6])
             temp = unicode(a[i:i+6])
             print '{}: uni'.format(temp.decode('unicode-escape'))
             n += temp.decode('unicode-escape')
-            i += 5
+            i += 6
     else:
         print '{}: ascii'.format(a[i])
         n += a[i]
